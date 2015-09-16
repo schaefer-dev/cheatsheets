@@ -75,12 +75,28 @@ word:
 # Commands
     u - undo anything
     U - undo whole line 
+    ^r - redo change (undo the last undo)
 
 
 # Macros
     q• - start recording macro in register • and stop again with q
     @• - run macro saved in register •    
     @@ - run last ran macro again
+
+# Latex-Suite
+    ^j - jump to the next placeholder
+    _ll - compile latex (_ = Space)
+
+# Folding
+    zo - open fold
+    zc - close fold
+    za - toggle fold
+    zO - open fold on all levels
+    zC - close fold on all levels
+    zA - toggle fold on all levels
+    zr - reduces folding by opening one more level of folds throughout the whole buffer
+    zR - open all folds
+    zM - close all folds
      
 
 
