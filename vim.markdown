@@ -1,24 +1,63 @@
-Foo(src,_dst,_len);    (_ = space)
+# Verbs / Operations
+    d - delete
+    c - change
+    y - yank
+    v - visually select
+    > - indent
 
-word:
+# Nouns - Motions
+    w - word
+    W - WORD
+    b - back a word
+    B - back a WORD
+    2j - down 2 line   
+    iw - "inner word" (works from anywhere in a word)
+    it - "inner tag" (content of html tag)
+    i" - inner quotes
+    i[ - inner brackets
+    ip - inner paragraph
+    as - a sentence
 
-* foo
-* (
-* src
-* ,
-* dst
-* ,
-* len
-* );
+# Nouns - Parameterized
+    f,F - find the next character
+    t,T - find the next character (up to but not including that character)
+    / - search (up to the match)
 
+# Most important Commands
+    :noh - undo markings in text (from search, ...)
+    . - repeat your last (atomic) command (including the insertion when using c for example)
+    zz - put the current line in the middle of the vim window
 
-# WORD:
-* Foo(src,
-* dst,
-* len);
+# Custom Operators
+## Surround.vim
+    ds' - delete surrounding '
+    cs"' - change surrounding " to '
+    ysiw" - surround the inner word with "
+    ys?? - add ? surounding to ?
+    cst<h1> - change the surrounding tag to <h1>
 
+## Commentary.vim
+    cml - comments over the line
+    cmj - comments line and line below
+    cmip - comments entire paragraph i am in
+Every command toggles comments so I can undo it exactly like I enabled it!
 
-# Move
+## SystemCopy
+    cpiw - copy word into system clipboard
+    cpi' - copy inside ' into system clipboard
+    cP - copy the current line into system clipboard
+
+## indent-Object
+defines an indent as a Text Object in vim
+    cmii - comments this indent (using Commentary.vim
+    <count>ai         (A)n (I)ndentation level and line above.
+    <count>ii         (I)nner (I)ndentation level (no line above).
+    <count>aI         (A)n (I)ndentation level and lines above/below.
+    <count>iI         (I)nner (I)ndentation level (no lines above/below). 
+
+# a bit more into detail now:
+
+## Move
 ### move cursor in line
     ^ - beginning of line (first not whitespace)
     0 - beginning of line (first column)
@@ -54,7 +93,7 @@ word:
     `• - jump to position marked with character •
 
 
-# Insert
+## Insert
     i - Insert in front of current character
     I - Insert in front of current line
     O - open newline over current line
@@ -63,7 +102,7 @@ word:
     a - append after current character
 
 
-# Visual
+## Visual
     p - paste yanked
     y - yank marked
     Y - yank current line
@@ -72,22 +111,46 @@ word:
     > - indent marked
 
 
-# Commands
+## Commands
     u - undo anything
     U - undo whole line 
     ^r - redo change (undo the last undo)
+    . - repeat the last command
 
 
-# Macros
+## Macros
     q• - start recording macro in register • and stop again with q
     @• - run macro saved in register •    
     @@ - run last ran macro again
 
-# Latex-Suite
+## Difference word/WORD
+Foo(src,_dst,_len);    (_ = space)
+
+word:
+
+* foo
+* (
+* src
+* ,
+* dst
+* ,
+* len
+* );
+
+
+## WORD:
+* Foo(src,
+* dst,
+* len);
+
+
+
+
+## Latex-Suite
     ^j - jump to the next placeholder
     _ll - compile latex (_ = Space)
 
-# Folding
+## Folding
     zo - open fold
     zc - close fold
     za - toggle fold
