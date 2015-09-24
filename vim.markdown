@@ -149,6 +149,7 @@ word:
 ## Latex-Suite
     ^j - jump to the next placeholder
     _ll - compile latex (_ = Space)
+    F5 - make the last word you typed to a new environment
 
 ## Folding
     zo - open fold
