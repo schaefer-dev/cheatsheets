@@ -30,22 +30,70 @@
 
 # Custom Operators
 ## Surround.vim
-    ds' - delete surrounding '
-    cs"' - change surrounding " to '
-    ysiw" - surround the inner word with "
-    ys?? - add ? surounding to ?
+Plugin to create, change or delete surroundings of lines and whole text-objects
+
+    cs*^ - change existing surrounding * to ^
+
+    ds* - remove surrounding entirely
+
+    yss* - surround entire line in *
+        ) - for brackets without space
+        ( - for brackets with space
+        } - for braces without space
+        { - for braces with space 
+        etc.
+
+    ys^* - surround text-object ^ with *
+        iw - for the word
+        etc.
+
+      Example:
+      "Hello world"
+
+      $cs"'
+      'Hello world'
+
+      $ds'
+      Hello world
+
+      $yss{
+      { Hello world }
+
+      $ysiw) ( (with cursor on Hello)
+      { (Hello) world }
+  
     cst<h1> - change the surrounding tag to <h1>
 
+Github-Link: https://github.com/tpope/vim-surround
+
 ## Commentary.vim
+Plugin to comment whole lines or text-objects in vim.
     cml - comments over the line
     cmj - comments line and line below
     cmip - comments entire paragraph i am in
 Every command toggles comments so I can undo it exactly like I enabled it!
 
+Github-Link: https://github.com/tpope/vim-commentary
+
 ## SystemCopy
+Plugin providing mappings for copying/ pasting text to the set os specific clipboard (usual pbcopy/ pbpaste for MacOS)
     cpiw - copy word into system clipboard
     cpi' - copy inside ' into system clipboard
     cP - copy the current line into system clipboard
+
+Github-Link: https://github.com/christoomey/vim-system-copy
+
+## Sort Motion.vim
+    Plugin to sort paragraphs or text-objects in general in vim (alphabetical, after numbers etc.)
+
+    gs* - sort the text-object/ motion *
+    gs2j - sort down two lines (including the current line)
+    gsip - sort the current paragraph
+    gsi( - sort in paranthesis
+
+Github-Link: https://github.com/christoomey/vim-sort-motion
+
+
 
 ## indent-Object
 defines an indent as a Text Object in vim
@@ -162,6 +210,36 @@ word:
     zR - open all folds
     zM - close all folds
      
+# Additional Vim Text-Objects
+
+### Python Text-Objects
+    af - a function
+    if - inner function
+    ac - a class
+    ic - inner class
+
+    new motions:
+    [pf - move to next function
+    ]pf - move to previous function
+    [pc - move to next class
+    ]pc - move to previous class
+
+Github-Link: https://github.com/bps/vim-textobj-python
+
+### Latex Text-Objects
+    a\ and i\ - Inline math surrounded by \\( and \\)
+    a$ and i$ - Inline math surrounded by dollar signs
+    aq and iq - Single-quoted text
+    aQ and iQ - Double-quoted text
+    ae and ie - Environment surrounded by \begin{...} and \end{...}
+
+Github-Link: https://github.com/rbonvall/vim-textobj-latex
+
+### Entire Text-objects
+    ae - entire content of the current buffer
+    ie - same as ae without leading and trailing empty lines
+
+Github-Link: https://github.com/kana/vim-textobj-entire
 
 
 
