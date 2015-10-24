@@ -28,6 +28,9 @@
     . - repeat your last (atomic) command (including the insertion when using c for example)
     zz - put the current line in the middle of the vim window
 
+# Split management
+    ctrl+hjkl - Switch vim Split in this direction
+
 # Custom Operators
 ## Surround.vim
 Plugin to create, change or delete surroundings of lines and whole text-objects
