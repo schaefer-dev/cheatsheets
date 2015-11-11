@@ -1,3 +1,6 @@
+# nice Latex Stuff
+    ysiw$ - in Wort mit Dollar ummanteln
+
 # Verbs / Operations
     d - delete
     c - change
