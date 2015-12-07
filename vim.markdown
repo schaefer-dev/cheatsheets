@@ -1,3 +1,9 @@
+# Tabs
+    :tabe <filepath> - to add a new tab
+    :ls to list tabs
+    :tabn next tab
+    :tabp previous tab
+
 # nice Latex Stuff
     ysiw$ - in Wort mit Dollar ummanteln
 
