@@ -241,5 +241,42 @@ Github-Link: https://github.com/rbonvall/vim-textobj-latex
 
 Github-Link: https://github.com/kana/vim-textobj-entire
 
+# Further Vim-Plugins
 
+## Sparkup
+Plugin which brings html-coding features.
+Enter Sparkup-commands in insert-mode to the .html file and enter C-E (Command-Key) still in insert-mode to expand the command.
 
+    Examples:
+    * div:
+     <div></div>
+    * div#header:
+     <div id="header"></div>
+    * div.align-left#header:
+     <div id="header" class="align-left"></div>
+    * div#header + div#footer:  
+     <div id="header"></div> 
+     <div id="footer"></div>
+    * #menu > ul:
+     <div id="menu">
+          <ul></ul>
+     </div>
+    * #header > h1{Welcome to our site}:
+     <div id="header">
+          <h1>Welcome to our site</h1>
+     </div>
+    * a[href=index.html]{Home}:
+     <a href="index.html">Home</a>
+    * ul > li.item-$*3:
+      <ul>
+          <li class="item-1"></li>
+          <li class="item-2"></li>
+          <li class="item-3"></li>
+      </ul>
+    * #header > ul > li < p{Footer}: 
+     <div id="header">
+         <ul>
+             <li></li>
+         </ul>
+         <p>Footer</p>
+     </div>
