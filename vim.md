@@ -1,3 +1,12 @@
+# Tabs
+    :tabe <filepath> - to add a new tab
+    :ls to list tabs
+    :tabn next tab
+    :tabp previous tab
+
+# nice Latex Stuff
+    ysiw$ - in Wort mit Dollar ummanteln
+
 # Verbs / Operations
     d - delete
     c - change
@@ -27,6 +36,9 @@
     :noh - undo markings in text (from search, ...)
     . - repeat your last (atomic) command (including the insertion when using c for example)
     zz - put the current line in the middle of the vim window
+
+# Split management
+    ctrl+hjkl - Switch vim Split in this direction
 
 # Custom Operators
 ## Surround.vim
