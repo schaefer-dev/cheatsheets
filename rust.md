@@ -12,6 +12,45 @@
 
 
 
+# Number Literals
+
+- `98_222` | Decimal
+- `0xff` | Hex
+- `0o77` | Octal
+- `0b1111_0000` | binary
+- `b'A'` | Byte (u8 only)
+
+
+
+# Keywords
+
+- `x as u32` | Primitive **cast** (may truncate etc)
+
+- `break x;` | Exit loop and yield `x` as value of loop
+
+- `continue;` | Continue to next loop iteration
+
+- `const X` | Define a **constant**
+
+- `extern crate` | Declares dependency on external crate
+
+- `fn f() -> T {}` | Function definition
+
+- `x: fn f()` | Function pointers
+
+- `let x;` | Bind a variable
+
+- `loop {}` | Loop unconditionally
+
+- `match m { ... }` | Initiate **pattern matching**
+
+- `mod m {} ` | Define a **module**
+
+- `static X` | **Global variable** with 'static' lifetime
+
+
+
+
 # Referencing
 
 - `&x` | immutable **borrow**
