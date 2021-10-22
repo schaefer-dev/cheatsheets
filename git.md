@@ -15,6 +15,9 @@
 - `git checkout amazing_new_feature` | switches branch, commits now in this branch
 - `git checkout master` `git merge amazing_new_feature` | new feature is completed, back to the master branch and merging it
 - `git branch -d awesome_new_feature` | deletes branch
+- `git branch -r` | lists remote branches
+- `git branch -a` | lists remote and local branches
+- `git remote prune origin` | clean up remote branches
 
 # Submodules
 - `git submodule add https://github.com/schaefer-dev/project.git path` | adds submodule to existing repo
@@ -25,3 +28,6 @@
 - `git show [commit]` | shows commit content
 - `git diff [commit1]..[commit2]` | shows differences between both commits
 - `git commit --amend` | fix commit typo (or missing added file) before push happened
+- `git update-index --chmod=+x path/to/file` | adds permissions to file
+- `git fetch --all && git reset --hard origin/master` | reset local to remote
+- `git log --stat` | shows log and displays the number of insertions and deletions to each file
